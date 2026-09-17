@@ -193,7 +193,7 @@ nonisolated final class RecordingAudioExporter: @unchecked Sendable {
 
     private static func temporaryOutputURL(pathExtension: String) -> URL {
         let directory = URL(fileURLWithPath: NSTemporaryDirectory())
-            .appendingPathComponent("Screendrop", isDirectory: true)
+            .appendingPathComponent("PureShot", isDirectory: true)
             .appendingPathComponent("StudioExports", isDirectory: true)
         try? FileManager.default.createDirectory(at: directory, withIntermediateDirectories: true)
         return directory

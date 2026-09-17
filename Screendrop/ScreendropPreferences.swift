@@ -89,7 +89,7 @@ enum ScreendropPreferences {
     static var defaultExportDirectory: URL {
         let picturesDirectory = FileManager.default.urls(for: .picturesDirectory, in: .userDomainMask).first
         return (picturesDirectory ?? FileManager.default.homeDirectoryForCurrentUser.appendingPathComponent("Pictures"))
-            .appendingPathComponent("Screendrop", isDirectory: true)
+            .appendingPathComponent("PureShot", isDirectory: true)
     }
 
     /// Unique ID of the camera recorded alongside the screen. Empty = camera off.
@@ -380,7 +380,7 @@ enum ScreenshotFileActions {
 
         let stagingURL = destinationURL
             .deletingLastPathComponent()
-            .appendingPathComponent(".Screendrop-\(UUID().uuidString)-\(destinationURL.lastPathComponent)")
+            .appendingPathComponent(".PureShot-\(UUID().uuidString)-\(destinationURL.lastPathComponent)")
         defer { try? FileManager.default.removeItem(at: stagingURL) }
 
         if destinationType == .png, actualImageContentType(at: sourceURL) == .png {

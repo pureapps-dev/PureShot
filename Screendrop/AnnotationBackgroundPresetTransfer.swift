@@ -9,7 +9,7 @@ import UniformTypeIdentifiers
 
 extension UTType {
     static let screendropPreset = UTType(
-        exportedAs: "com.fayazahmed.screendrop.preset",
+        exportedAs: "apps.pure.pureshot.preset",
         conformingTo: .json
     )
 }
@@ -20,7 +20,7 @@ extension UTType {
 struct AnnotationBackgroundPresetTransferFile: Codable {
     static let currentVersion = 1
     static let formatIdentifier = "screendrop-screenshot-presets"
-    static let filenameExtension = "screendroppreset"
+    static let filenameExtension = "pureshotpreset"
     static let maximumFileSize = 1_000_000
     static let maximumPresetCount = 100
 
@@ -326,9 +326,9 @@ enum AnnotationBackgroundPresetTransferError: LocalizedError {
         case .presetNotFound:
             "The selected preset no longer exists."
         case .invalidJSON:
-            "This is not a valid Screendrop preset file."
+            "This is not a valid PureShot preset file."
         case .invalidFormat:
-            "This JSON file is not a Screendrop screenshot preset."
+            "This JSON file is not a PureShot screenshot preset."
         case .unsupportedVersion(let version):
             "This preset uses unsupported format version \(version)."
         case .emptyFile:

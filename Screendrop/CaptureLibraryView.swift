@@ -51,7 +51,7 @@ struct CaptureLibraryView: View {
                 statusBar
             }
             .navigationTitle(activeFilter.title)
-            .navigationSubtitle("Screendrop")
+            .navigationSubtitle("PureShot")
         }
         .navigationSplitViewStyle(.balanced)
         .searchable(text: $model.searchText, placement: .toolbar, prompt: "Search captures")

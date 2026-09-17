@@ -83,6 +83,7 @@ final class CaptureCoordinator {
 
     @discardableResult
     private func performCaptureFullscreen() async -> URL? {
+        guard PureAppsGate.allowStartingCapture() else { return nil }
         let displayID = ActiveDisplayResolver.activeDisplayID(preferPointer: false)
         PreviewWindowPlacement.shared.setTargetDisplayID(displayID)
 
@@ -96,6 +97,7 @@ final class CaptureCoordinator {
 
     @discardableResult
     private func performCaptureWindow() async -> URL? {
+        guard PureAppsGate.allowStartingCapture() else { return nil }
         // The self-timer is handled by screencapture's `-T` so the delay
         // happens *after* the window is picked, not before.
         guard let url = await ScreenshotManager.shared.captureWindow(
@@ -108,6 +110,7 @@ final class CaptureCoordinator {
 
     @discardableResult
     private func performCaptureArea() async -> URL? {
+        guard PureAppsGate.allowStartingCapture() else { return nil }
         // The self-timer is handled by screencapture's `-T` so the delay
         // happens *after* the area is drawn, not before.
         guard let url = await ScreenshotManager.shared.captureArea(
@@ -127,6 +130,7 @@ final class CaptureCoordinator {
     /// after the area is drawn, matching Capture Area.
     @discardableResult
     private func performCaptureText() async -> CaptureTextOutcome {
+        guard PureAppsGate.allowStartingCapture() else { return .cancelled }
         guard let url = await ScreenshotManager.shared.captureArea(
             delaySeconds: ScreendropPreferences.captureDelaySeconds
         ) else { return .cancelled }
@@ -156,6 +160,7 @@ final class CaptureCoordinator {
     }
 
     func recordFullscreen(_ display: SCDisplay) {
+        guard PureAppsGate.allowStartingCapture() else { return }
         Task {
             guard await CaptureCountdownPresenter.shared.runIfNeeded(
                 seconds: ScreendropPreferences.recordingStartDelaySeconds,
@@ -166,6 +171,7 @@ final class CaptureCoordinator {
     }
 
     func recordWindow(_ window: SCWindow) {
+        guard PureAppsGate.allowStartingCapture() else { return }
         Task {
             let displayID = ActiveDisplayResolver.activeDisplayID(preferPointer: true)
             guard await CaptureCountdownPresenter.shared.runIfNeeded(
@@ -177,6 +183,7 @@ final class CaptureCoordinator {
     }
 
     func recordArea(_ display: SCDisplay) {
+        guard PureAppsGate.allowStartingCapture() else { return }
         RecordingAreaSelectionPresenter.shared.selectArea(on: display) { rect in
             guard let rect else { return }
             Task {

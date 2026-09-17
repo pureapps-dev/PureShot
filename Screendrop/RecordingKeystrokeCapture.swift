@@ -181,7 +181,7 @@ final class RecordingKeystrokeRecorder {
             callback: callback,
             userInfo: userInfo
         ) else {
-            NSLog("[Screendrop] Keystroke event tap unavailable; using NSEvent monitors only.")
+            NSLog("[PureShot] Keystroke event tap unavailable; using NSEvent monitors only.")
             return
         }
 

@@ -391,7 +391,7 @@ final class ScreenRecordingManager {
                 do {
                     try session.writePointerCapture(capture)
                 } catch {
-                    NSLog("[Screendrop] Failed to save recording input timeline: \(error)")
+                    NSLog("[PureShot] Failed to save recording input timeline: \(error)")
                     metadataWarnings.append(
                         "The screen footage was saved, but its cursor and click data could not be saved."
                     )
@@ -404,7 +404,7 @@ final class ScreenRecordingManager {
             do {
                 try session.writeCaptureManifest(manifest)
             } catch {
-                NSLog("[Screendrop] Failed to save recording manifest: \(error)")
+                NSLog("[PureShot] Failed to save recording manifest: \(error)")
                 metadataWarnings.append(
                     "The screen footage was saved, but some Studio metadata could not be saved."
                 )
@@ -592,9 +592,9 @@ final class ScreenRecordingManager {
         alert.alertStyle = .warning
         alert.messageText = "Screen Recording permission needed"
         alert.informativeText = """
-        Screendrop can't record until it's allowed under Privacy & Security > \
+        PureShot can't record until it's allowed under Privacy & Security > \
         Screen & System Audio Recording. After turning it on, quit and reopen \
-        Screendrop - macOS applies the permission on relaunch.
+        PureShot - macOS applies the permission on relaunch.
         """
         alert.addButton(withTitle: "Open System Settings")
         alert.addButton(withTitle: "Cancel")

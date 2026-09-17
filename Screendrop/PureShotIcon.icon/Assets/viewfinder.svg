@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="1024px" height="1024px">
+  <!-- A camera viewfinder: four corner brackets around a lens ring. White only, per the
+       PureApps icon rule; the ring's hole is cut (evenodd), not faded. Bounding box 46x46
+       around the centre: half-diagonal 32.5, inside the radius-35 circle. -->
+  <path fill="#fff" fill-rule="evenodd" d="
+    M27 42V34A7 7 0 0 1 34 27H42V34H34V42Z
+    M58 27H66A7 7 0 0 1 73 34V42H66V34H58Z
+    M73 58V66A7 7 0 0 1 66 73H58V66H66V58Z
+    M42 73H34A7 7 0 0 1 27 66V58H34V66H42Z
+    M38 50a12 12 0 1 0 24 0a12 12 0 1 0-24 0Z
+    M44.5 50a5.5 5.5 0 1 0 11 0a5.5 5.5 0 1 0-11 0Z"/>
+</svg>

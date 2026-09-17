@@ -83,7 +83,7 @@ enum ScreenshotCompressionService {
 
     nonisolated private static func temporaryJPEGURL(for sourceURL: URL) throws -> URL {
         let directory = URL(fileURLWithPath: NSTemporaryDirectory(), isDirectory: true)
-            .appendingPathComponent("Screendrop/CompressedImages", isDirectory: true)
+            .appendingPathComponent("PureShot/CompressedImages", isDirectory: true)
         try FileManager.default.createDirectory(at: directory, withIntermediateDirectories: true)
 
         let baseName = sourceURL.deletingPathExtension().lastPathComponent

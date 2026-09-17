@@ -102,7 +102,7 @@ final class ScreenshotHistoryStore {
     static var applicationSupportDirectory: URL {
         let baseURL = FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask).first
             ?? FileManager.default.homeDirectoryForCurrentUser.appendingPathComponent("Library/Application Support", isDirectory: true)
-        return baseURL.appendingPathComponent("Screendrop", isDirectory: true)
+        return baseURL.appendingPathComponent("PureShot", isDirectory: true)
     }
 
     static var historyDirectory: URL {
@@ -116,7 +116,7 @@ final class ScreenshotHistoryStore {
     /// Location of the editable annotation sidecar document for a display image,
     /// e.g. `Screendrop_2026.png` -> `Screendrop_2026.png.screendrop`.
     static func editDocumentURL(for displayURL: URL) -> URL {
-        displayURL.appendingPathExtension("screendrop")
+        displayURL.appendingPathExtension("pureshot")
     }
 
     /// Location of the untouched base image for a display image,
@@ -500,7 +500,7 @@ final class ScreenshotHistoryStore {
         }
 
         return Self.historyDirectory
-            .appendingPathComponent("Screendrop_\(UUID().uuidString)")
+            .appendingPathComponent("PureShot_\(UUID().uuidString)")
             .appendingPathExtension(pathExtension)
     }
 

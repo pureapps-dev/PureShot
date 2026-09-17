@@ -19,11 +19,11 @@ struct ScreendropApp: App {
     var body: some Scene {
         let _ = configurePreviewPresentation()
 
-        MenuBarExtra("Screendrop", image: "MenuBarIcon", isInserted: $showMenuBarIcon) {
+        MenuBarExtra("PureShot", image: "MenuBarIcon", isInserted: $showMenuBarIcon) {
             MenuBarView()
         }
 
-        Window("Screendrop Library", id: "CAPTURE_LIBRARY") {
+        Window("PureShot Library", id: "CAPTURE_LIBRARY") {
             CaptureLibraryView()
         }
         .defaultSize(width: 1180, height: 760)
@@ -34,19 +34,22 @@ struct ScreendropApp: App {
                 Button("Show Library") { CaptureLibraryModel.shared.show() }
                     .keyboardShortcut("l", modifiers: [.command, .shift])
             }
+            CommandGroup(replacing: .appInfo) {
+                Button("About PureShot") { PureAppsGate.showAbout() }
+            }
             CommandGroup(replacing: .appSettings) {
                 Button("Settings…") { SettingsWindowController.show(tab: .general) }
                     .keyboardShortcut(",", modifiers: .command)
             }
         }
         
-        WindowGroup("Screendrop Annotate", id: "ANNOTATION_EDITOR", for: URL.self) { value in
+        WindowGroup("PureShot Annotate", id: "ANNOTATION_EDITOR", for: URL.self) { value in
             AnnotationEditorWindow(url: value)
         }
         .windowResizability(.contentSize)
         .defaultSize(width: 1100, height: 760)
 
-        WindowGroup("Screendrop Recording Editor", id: "VIDEO_EDITOR", for: URL.self) { value in
+        WindowGroup("PureShot Recording Editor", id: "VIDEO_EDITOR", for: URL.self) { value in
             RecordingStudioWindow(url: value)
         }
         .windowResizability(.contentSize)
@@ -120,7 +123,6 @@ struct ScreendropApp: App {
 // MARK: - App Delegate
 
 final class AppDelegate: NSObject, NSApplicationDelegate {
-    private let updaterManager = UpdaterManager.shared
     private var openedFilesAtLaunch = false
 
     /// Files handed to us via Finder's "Open With" (or `open -a Screendrop`)
@@ -147,7 +149,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_ notification: Notification) {
         NSApp.setActivationPolicy(.accessory)
         HotkeyManager.shared.registerHotkeys()
-        updaterManager.start()
+        PureAppsGate.checkAtLaunch()
         RecordingRecoveryCoordinator.recoverInterruptedRecordings()
         let launchEvent = NSAppleEventManager.shared().currentAppleEvent
         let launchReason = launchEvent?.paramDescriptor(forKeyword: keyAEPropData)?.enumCodeValue
@@ -194,8 +196,8 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
             alert.alertStyle = .warning
             alert.messageText = "A screen recording is still in progress"
             alert.informativeText = unsavedCount > 0
-                ? "Screendrop will finish and save the recording before quitting. You also have \(unsavedCount) unsaved capture\(unsavedCount == 1 ? "" : "s") that will be discarded."
-                : "Screendrop will finish and save the recording before quitting. This can take a moment for a long recording."
+                ? "PureShot will finish and save the recording before quitting. You also have \(unsavedCount) unsaved capture\(unsavedCount == 1 ? "" : "s") that will be discarded."
+                : "PureShot will finish and save the recording before quitting. This can take a moment for a long recording."
             alert.addButton(withTitle: "Cancel")
             alert.addButton(withTitle: "Finish Recording and Quit")
 

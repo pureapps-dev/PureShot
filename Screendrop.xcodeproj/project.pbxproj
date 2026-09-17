@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		31A100022F9DC05A002A7AF3 /* Sparkle in Frameworks */ = {isa = PBXBuildFile; productRef = 31A100012F9DC05A002A7AF3 /* Sparkle */; };
+		31A100022F9DC05A002A7AF3 /* PureAppsLicense in Frameworks */ = {isa = PBXBuildFile; productRef = 31A100012F9DC05A002A7AF3 /* PureAppsLicense */; };
 		5EB13EE1F16DFCBCFE9A3449 /* DockProgress in Frameworks */ = {isa = PBXBuildFile; productRef = 6711E7AD88BD96C1258D3CE6 /* DockProgress */; };
 /* End PBXBuildFile section */
 
@@ -28,7 +28,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				31A100022F9DC05A002A7AF3 /* Sparkle in Frameworks */,
+				31A100022F9DC05A002A7AF3 /* PureAppsLicense in Frameworks */,
 				5EB13EE1F16DFCBCFE9A3449 /* DockProgress in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -72,7 +72,7 @@
 			);
 			name = Screendrop;
 			packageProductDependencies = (
-				31A100012F9DC05A002A7AF3 /* Sparkle */,
+				31A100012F9DC05A002A7AF3 /* PureAppsLicense */,
 				6711E7AD88BD96C1258D3CE6 /* DockProgress */,
 			);
 			productName = Screendrop;
@@ -104,7 +104,7 @@
 			mainGroup = 316389142F9DC05A002A7AF3;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				31A100002F9DC05A002A7AF3 /* XCRemoteSwiftPackageReference "Sparkle" */,
+				31A100002F9DC05A002A7AF3 /* XCRemoteSwiftPackageReference "PureAppsLicense" */,
 				BAD69099DE38A64197B1CFDA /* XCRemoteSwiftPackageReference "DockProgress" */,
 			);
 			preferredProjectObjectVersion = 77;
@@ -173,7 +173,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = TB2S44TFQS;
+				DEVELOPMENT_TEAM = VFYA7T675R;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -237,7 +237,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = TB2S44TFQS;
+				DEVELOPMENT_TEAM = VFYA7T675R;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -261,21 +261,21 @@
 		316389292F9DC05B002A7AF3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = Screendrop;
+				ASSETCATALOG_COMPILER_APPICON_NAME = PureShotIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_ENTITLEMENTS = Screendrop/Screendrop.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 30;
-				DEVELOPMENT_TEAM = TB2S44TFQS;
+				DEVELOPMENT_TEAM = VFYA7T675R;
 				ENABLE_APP_SANDBOX = NO;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Screendrop/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = Screendrop;
+				INFOPLIST_KEY_CFBundleDisplayName = PureShot;
 				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -287,9 +287,9 @@
 					"$(PROJECT_DIR)/Screendrop/Vendor/DeepFilterNet/lib",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 26.0;
-				MARKETING_VERSION = 0.32.1;
-				PRODUCT_BUNDLE_IDENTIFIER = com.fayazahmed.Screendrop;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				MARKETING_VERSION = 1.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = apps.pure.pureshot;
+				PRODUCT_NAME = PureShot;
 				REGISTER_APP_GROUPS = YES;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
@@ -303,21 +303,21 @@
 		3163892A2F9DC05B002A7AF3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = Screendrop;
+				ASSETCATALOG_COMPILER_APPICON_NAME = PureShotIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_ENTITLEMENTS = Screendrop/Screendrop.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 30;
-				DEVELOPMENT_TEAM = TB2S44TFQS;
+				DEVELOPMENT_TEAM = VFYA7T675R;
 				ENABLE_APP_SANDBOX = NO;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Screendrop/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = Screendrop;
+				INFOPLIST_KEY_CFBundleDisplayName = PureShot;
 				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -329,9 +329,9 @@
 					"$(PROJECT_DIR)/Screendrop/Vendor/DeepFilterNet/lib",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 26.0;
-				MARKETING_VERSION = 0.32.1;
-				PRODUCT_BUNDLE_IDENTIFIER = com.fayazahmed.Screendrop;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				MARKETING_VERSION = 1.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = apps.pure.pureshot;
+				PRODUCT_NAME = PureShot;
 				REGISTER_APP_GROUPS = YES;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
@@ -377,7 +377,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = TB2S44TFQS;
+				DEVELOPMENT_TEAM = VFYA7T675R;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -409,21 +409,21 @@
 		31CA951B2FCB2749003035C6 /* Debug Dev */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = Screendrop;
+				ASSETCATALOG_COMPILER_APPICON_NAME = PureShotIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_ENTITLEMENTS = Screendrop/Screendrop.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 30;
-				DEVELOPMENT_TEAM = TB2S44TFQS;
+				DEVELOPMENT_TEAM = VFYA7T675R;
 				ENABLE_APP_SANDBOX = NO;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Screendrop/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Screendrop Dev";
+				INFOPLIST_KEY_CFBundleDisplayName = "PureShot Dev";
 				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -435,9 +435,9 @@
 					"$(PROJECT_DIR)/Screendrop/Vendor/DeepFilterNet/lib",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 26.0;
-				MARKETING_VERSION = 0.32.1;
-				PRODUCT_BUNDLE_IDENTIFIER = com.fayazahmed.Screendrop.dev;
-				PRODUCT_NAME = "$(TARGET_NAME) Dev";
+				MARKETING_VERSION = 1.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = apps.pure.pureshot.dev;
+				PRODUCT_NAME = "PureShot Dev";
 				REGISTER_APP_GROUPS = YES;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
@@ -474,12 +474,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		31A100002F9DC05A002A7AF3 /* XCRemoteSwiftPackageReference "Sparkle" */ = {
+		31A100002F9DC05A002A7AF3 /* XCRemoteSwiftPackageReference "PureAppsLicense" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/sparkle-project/Sparkle.git";
+			repositoryURL = "https://github.com/pureapps-dev/PureAppsLicense";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 2.7.0;
+				minimumVersion = 1.0.0;
 			};
 		};
 		BAD69099DE38A64197B1CFDA /* XCRemoteSwiftPackageReference "DockProgress" */ = {
@@ -493,10 +493,10 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		31A100012F9DC05A002A7AF3 /* Sparkle */ = {
+		31A100012F9DC05A002A7AF3 /* PureAppsLicense */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 31A100002F9DC05A002A7AF3 /* XCRemoteSwiftPackageReference "Sparkle" */;
-			productName = Sparkle;
+			package = 31A100002F9DC05A002A7AF3 /* XCRemoteSwiftPackageReference "PureAppsLicense" */;
+			productName = PureAppsLicense;
 		};
 		6711E7AD88BD96C1258D3CE6 /* DockProgress */ = {
 			isa = XCSwiftPackageProductDependency;

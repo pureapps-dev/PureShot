@@ -25,7 +25,7 @@ import OSLog
 import SwiftUI
 
 nonisolated final class RecordingStudioExporter: @unchecked Sendable {
-    private static let logger = Logger(subsystem: "com.fayazahmed.Screendrop", category: "StudioExport")
+    private static let logger = Logger(subsystem: "apps.pure.pureshot", category: "StudioExport")
 
     struct Configuration: Sendable {
         let screenURL: URL
@@ -503,7 +503,7 @@ nonisolated final class RecordingStudioExporter: @unchecked Sendable {
 
     private static func temporaryOutputURL(container: VideoExportContainer) -> URL {
         let directory = URL(fileURLWithPath: NSTemporaryDirectory())
-            .appendingPathComponent("Screendrop", isDirectory: true)
+            .appendingPathComponent("PureShot", isDirectory: true)
             .appendingPathComponent("StudioExports", isDirectory: true)
         try? FileManager.default.createDirectory(at: directory, withIntermediateDirectories: true)
         return directory.appendingPathComponent("\(UUID().uuidString).\(container.fileExtension)")

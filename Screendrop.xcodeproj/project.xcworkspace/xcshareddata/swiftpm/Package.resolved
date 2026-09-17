@@ -1,5 +1,5 @@
 {
-  "originHash" : "263efd6589c2aac20bf6bfe6e752ea93016adabb4429f21343333f399a0e3ac1",
+  "originHash" : "a4d921fda6d682d85456f52bb0ad22668b47de26e7c7ec64eb995e6c68766f4f",
   "pins" : [
     {
       "identity" : "dockprogress",
@@ -11,12 +11,12 @@
       }
     },
     {
-      "identity" : "sparkle",
+      "identity" : "pureappslicense",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/sparkle-project/Sparkle.git",
+      "location" : "https://github.com/pureapps-dev/PureAppsLicense",
       "state" : {
-        "revision" : "066e75a8b3e99962685d6a90cdd5293ebffd9261",
-        "version" : "2.9.1"
+        "revision" : "bc995e6726e5941530531df1d515a02db906dbd5",
+        "version" : "1.0.0"
       }
     }
   ],

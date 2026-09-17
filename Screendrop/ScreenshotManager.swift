@@ -167,7 +167,7 @@ final class ScreenshotManager {
         }
 
         return directory
-            .appendingPathComponent("Screendrop_\(UUID().uuidString)")
+            .appendingPathComponent("PureShot_\(UUID().uuidString)")
             .appendingPathExtension(ext)
             .path
     }
