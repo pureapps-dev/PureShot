@@ -54,9 +54,9 @@ enum AfterCaptureAction: String, CaseIterable, Identifiable {
     static func actions(for type: AfterCaptureType) -> [AfterCaptureAction] {
         switch type {
         case .screenshot:
-            [.showOverlay, .copy, .save, .upload, .annotate, .pin]
+            [.showOverlay, .copy, .save, .annotate, .pin]
         case .recording:
-            [.showOverlay, .copy, .save, .upload, .openVideoEditor]
+            [.showOverlay, .copy, .save, .openVideoEditor]
         }
     }
 

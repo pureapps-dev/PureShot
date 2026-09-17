@@ -15,9 +15,25 @@
 		3163891D2F9DC05A002A7AF3 /* Screendrop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Screendrop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		AB30000000000000000001 /* Exceptions for "Screendrop" folder in "Screendrop" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				CloudCredentialStore.swift,
+				CloudSidecarUploader.swift,
+				CloudUploader.swift,
+				SettingsCloudPane.swift,
+			);
+			target = 3163891C2F9DC05A002A7AF3 /* Screendrop */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		3163891F2F9DC05A002A7AF3 /* Screendrop */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				AB30000000000000000001 /* Exceptions for "Screendrop" folder in "Screendrop" target */,
+			);
 			path = Screendrop;
 			sourceTree = "<group>";
 		};

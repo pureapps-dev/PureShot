@@ -93,7 +93,7 @@ struct CaptureLibraryView: View {
             Button("Move to Trash", role: .destructive) { model.movePendingItemsToTrash() }
             Button("Cancel", role: .cancel) { model.pendingTrash = [] }
         } message: {
-            Text("The local files and their edits will move to Trash. Exported copies and cloud links will remain available.")
+            Text("The local files and their edits will move to Trash. Exported copies will remain available.")
         }
         .alert("The Library action could not be completed", isPresented: Binding(
             get: { model.errorMessage != nil },

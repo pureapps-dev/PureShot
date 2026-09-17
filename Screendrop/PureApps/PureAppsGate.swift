@@ -1,4 +1,5 @@
 import AppKit
+import Observation
 import PureAppsLicense
 import SwiftUI
 import os
@@ -134,4 +135,73 @@ struct SettingsAboutPane: View {
         .scrollContentBackground(.hidden)
         .contentMargins(.top, 8, for: .scrollContent)
     }
+}
+
+// MARK: - Cloud upload removed
+
+// PureShot ships without upstream's Cloud upload (a self-hosted worker from the upstream
+// author's repo). The four files that talk to it (CloudUploader, CloudSidecarUploader,
+// CloudCredentialStore, SettingsCloudPane) stay in the tree for clean merges but are
+// excluded from the target in project.pbxproj. These stand-ins keep the call sites
+// compiling: never configured, no state, no network. Every upload UI is hidden by
+// `isConfigured == false`, and a stray call throws instead of reaching the network.
+
+struct CloudUploadResult: Sendable {
+    let id: String
+    let url: String
+    let filename: String
+    let size: Int
+}
+
+enum CloudUploadError: LocalizedError {
+    case notConfigured
+
+    var errorDescription: String? {
+        "Cloud upload is not available in PureShot."
+    }
+}
+
+@MainActor
+@Observable
+final class CloudUploader: NSObject {
+    static let shared = CloudUploader()
+
+    private(set) var uploadProgress: [UUID: Double] = [:]
+    private(set) var uploadingItems: Set<UUID> = []
+    private(set) var uploadedURLs: [UUID: String] = [:]
+    private(set) var failedItemIDs: Set<UUID> = []
+
+    private override init() {
+        super.init()
+    }
+
+    var isConfigured: Bool { false }
+
+    func upload(
+        itemID: UUID,
+        fileURL: URL,
+        title: String? = nil,
+        socialEnabled: Bool = true
+    ) async throws -> CloudUploadResult {
+        throw CloudUploadError.notConfigured
+    }
+
+    func cancelUpload(for itemID: UUID) {}
+    func clearUploadState(for itemID: UUID) {}
+    func clearFailed(for itemID: UUID) {}
+
+    func deleteFromCloud(uploadID: String) async throws {
+        throw CloudUploadError.notConfigured
+    }
+}
+
+@Observable
+final class CloudCredentialStore {
+    static let shared = CloudCredentialStore()
+
+    private init() {}
+
+    var uploadToken: String { "" }
+    var workerURL: String { "" }
+    var isConfigured: Bool { false }
 }

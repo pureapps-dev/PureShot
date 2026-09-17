@@ -126,7 +126,7 @@ struct OverlayCardLayout: Codable, Equatable {
         topLeading: .delete,
         topTrailing: .close,
         bottomLeading: .annotate,
-        bottomTrailing: .upload,
+        bottomTrailing: nil,
         center: [.copy, .save, .pin],
         hidden: [.view, .compress]
     )
@@ -204,7 +204,7 @@ struct OverlayCardLayout: Codable, Equatable {
     /// dropped and any action missing entirely (e.g. added in a newer build) is
     /// appended to the hidden tray.
     func normalized() -> OverlayCardLayout {
-        var seen = Set<OverlayCardAction>()
+        var seen: Set<OverlayCardAction> = [.upload]
         var result = OverlayCardLayout(
             topLeading: nil,
             topTrailing: nil,

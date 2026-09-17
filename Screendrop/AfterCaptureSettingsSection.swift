@@ -38,18 +38,5 @@ private struct AfterCaptureToggleRow: View {
             SettingsControlLabel(title, detail: subtitle)
         }
         .toggleStyle(.switch)
-        .disabled(action == .upload && !isOn && !CloudCredentialStore.shared.isConfigured)
-
-        if action == .upload && !CloudCredentialStore.shared.isConfigured {
-            HStack {
-                Text(isOn ? "Automatic uploads are paused until Cloud is set up."
-                          : "Set up Cloud to enable automatic uploads.")
-                    .font(.caption)
-                    .foregroundStyle(.secondary)
-                Spacer()
-                Button("Set Up Cloud…") { SettingsWindowController.show(tab: .cloud) }
-                    .controlSize(.small)
-            }
-        }
     }
 }
